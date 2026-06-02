@@ -1,82 +1,64 @@
-# P107 假裝忙碌的螢幕
+# P107 Campus Busy Screen — 校園營運忙碌螢幕
 
 ## 專案名稱
+**P107 Campus Busy Screen**  
+**校園營運忙碌螢幕**
 
-**P107 慈濟大學 經營管理學系 智慧商情研究室動態資訊展示牆**
+## 版本說明
+本版保留原本 V1「文字雨總控台」概念，新增 V2「八區塊校園營運智慧牆」。本次小修重點如下：
 
-英文名稱：**P107 Simulated Business Intelligence Operations Dashboard**
+1. **修正版面裁切問題**：縮短 V2 上方說明區與八區塊卡片高度，並讓主要介面在螢幕高度不足時可捲動，避免第二排卡片文字被切掉。
+2. **數據跳動更真實**：人流、Wi‑Fi、停車剩餘、CO₂、LMS 登入等數值改為「小幅連續漂移」，避免突然大幅跳動。
+3. **商情訊號流改為滑動式**：Business Intelligence Stream 改為緩慢滑動 ticker，方便閱讀；滑鼠移到該區塊可暫停滑動。
 
-## 專案定位
+上方提供兩個切換按鈕：
 
-本專案是一個純前端的展示型網頁，用於營造「智慧商情研究室正在進行大量資料蒐集、校園營運分析、空氣品質監測、空間使用判讀與 AI 洞察生成」的視覺效果。
+- **V1 文字雨總控台**：科技感、Matrix 文字雨、AI 資料流、地圖、即時指標與圖表。
+- **V2 八區塊營運牆**：依照校園經營管理意義，分成 8 個 Dashboard 區塊。
 
-本系統所顯示之數據均為模擬資料，適合用於：
+## V2 八個區塊
 
-1. 研究室門口展示螢幕
-2. 系所導覽
-3. 招生活動
-4. 管理學、資訊系統、資料視覺化課程示範
-5. 學生專題概念展示
+1. **Campus Live Pulse 校園即時脈動**  
+   人流、Wi‑Fi 裝置、噪音分貝。
 
-## 重要聲明
+2. **Operation Map 校園營運地圖**  
+   清潔任務、教室使用率、停車剩餘。
 
-畫面中的資料是隨機產生的模擬資料，不代表真實監測結果。系統右上角已標示：
+3. **Business Intelligence Stream 商情訊號流**  
+   校園活動、商情關鍵字、服務流程與趨勢訊號。
 
-> 模擬展示資料｜非即時監測數據
+4. **Facility Management 設施管理**  
+   空調負載、照明效率、維修處理。
 
-## 檔案說明
+5. **Learning Analytics 學習分析**  
+   LMS 登入、作業繳交率、教材點閱。
 
-- `index.html`：主畫面
-- `style.css`：視覺設計與動畫樣式
-- `script.js`：假資料產生、文字雨、Robot Log、圖表、時鐘與狀態更新
-- `README.md`：系統說明
+6. **System Monitor 系統監控**  
+   API 請求、資料庫查詢、CPU 負載。
+
+7. **Environmental Intelligence 環境智慧監測**  
+   CO₂、PM2.5、溫濕度與環境趨勢線。
+
+8. **Decision Support Index 決策支援指標**  
+   空間效率、服務負載、能源效率與綜合決策指數。
 
 ## 使用方式
 
-直接開啟 `index.html` 即可執行。
+1. 解壓縮 ZIP。
+2. 開啟資料夾中的 `index.html`。
+3. 可直接在本機瀏覽器執行，不需要 Supabase、不需要 Edge Function、不需要網路。
+4. 若要放到 GitHub Pages，直接上傳整個資料夾內的檔案即可。
 
-若要放到 GitHub Pages：
+## 檔案結構
 
-1. 建立 GitHub repository
-2. 上傳本資料夾內的檔案
-3. 到 Settings → Pages
-4. 選擇 main branch / root
-5. 儲存後即可取得公開網址
+```text
+P107_Campus_Busy_Screen_v2_1/
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+```
 
-## 第一版特色
+## 注意事項
 
-- Matrix 風格文字雨背景
-- Robot Data Stream 自動更新
-- 校園營運模擬地圖
-- 移動節點動畫
-- CO₂、PM2.5、溫度、濕度、噪音、人流假資料
-- 商情分析 KPI
-- AI Insight 自動切換
-- 科技風深色玻璃介面
-- 不需資料庫
-- 不需 Supabase
-- 不需登入
-
-## 後續可擴充方向
-
-1. 接入真實 Google Sheets 資料
-2. 接入 Supabase 資料庫
-3. 新增全螢幕按鈕
-4. 加入真正校園 SVG 地圖
-5. 增加多頁輪播模式
-6. 加入不同展示主題，例如招生、課程、專題成果、研究能量
-7. 支援大螢幕 16:9、直式螢幕、電視牆模式
-
-## 風格設定
-
-本版採用：
-
-**電腦高手風格 70% + 賽博科技風 20% + 學術研究室風 10%**
-
-設計關鍵字：
-
-- Cyber Intelligence Operations Room
-- Smart Campus Simulation
-- Business Intelligence Wall
-- Hacker Terminal Style
-- Neon Dashboard
+本系統目前所有資料皆為前端 JavaScript 模擬資料，適合展示、教學、導覽與概念驗證，不代表真實校園資料。
