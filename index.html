@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>P107 慈濟大學 經營管理學系 智慧商情研究室</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="matrixCanvas"></canvas>
+  <div class="scanline"></div>
+  <div class="noise"></div>
+
+  <main class="dashboard-shell">
+    <header class="topbar glass">
+      <div>
+        <div class="lab-label">P107 SIMULATED BUSINESS INTELLIGENCE OPERATIONS DASHBOARD</div>
+        <h1>慈濟大學 經營管理學系 智慧商情研究室</h1>
+        <p>Smart Business Intelligence Lab｜Campus Operation Simulation Wall</p>
+      </div>
+      <div class="system-clock">
+        <span id="clock">--:--:--</span>
+        <span class="status-pill"><i></i> SYSTEM ACTIVE</span>
+        <span class="simulation-tag">模擬展示資料｜非即時監測數據</span>
+      </div>
+    </header>
+
+    <section class="grid-layout">
+      <aside class="panel glass terminal-panel">
+        <div class="panel-title">ROBOT DATA STREAM</div>
+        <div id="robotLog" class="robot-log"></div>
+      </aside>
+
+      <section class="center-stack">
+        <div class="hero-panel glass">
+          <div class="hero-left">
+            <div class="pulse-orb"></div>
+            <div>
+              <div class="small-caption">AI ANALYSIS MODE</div>
+              <h2 id="analysisMode">Campus Flow Intelligence</h2>
+              <p id="aiInsight">Initializing simulated intelligence core...</p>
+            </div>
+          </div>
+          <div class="hero-metrics">
+            <div><span id="efficiencyIndex">--</span><small>Resource Efficiency</small></div>
+            <div><span id="riskLevel">LOW</span><small>Operational Risk</small></div>
+            <div><span id="dataPackets">000000</span><small>Packets / min</small></div>
+          </div>
+        </div>
+
+        <div class="map-panel glass">
+          <div class="panel-title">CAMPUS OPERATION MAP</div>
+          <div class="campus-map">
+            <div class="map-grid"></div>
+            <div class="zone zone-a"><strong>A</strong><span>教學區</span></div>
+            <div class="zone zone-b"><strong>B</strong><span>圖書館</span></div>
+            <div class="zone zone-c"><strong>C</strong><span>行政區</span></div>
+            <div class="zone zone-d"><strong>D</strong><span>餐飲區</span></div>
+            <div class="zone zone-e"><strong>E</strong><span>研究室</span></div>
+            <div class="moving-dot dot-1"></div>
+            <div class="moving-dot dot-2"></div>
+            <div class="moving-dot dot-3 cleaning"></div>
+            <div class="moving-dot dot-4"></div>
+            <svg class="map-lines" viewBox="0 0 1000 520" preserveAspectRatio="none">
+              <path d="M100 350 C250 120 380 400 500 250 S720 100 900 310" />
+              <path d="M120 120 C300 180 420 80 550 160 S760 330 900 160" />
+              <path d="M250 440 C360 300 520 440 640 280 S760 220 850 420" />
+            </svg>
+          </div>
+          <div class="zone-statuses" id="zoneStatuses"></div>
+        </div>
+      </section>
+
+      <aside class="right-stack">
+        <section class="panel glass sensors">
+          <div class="panel-title">ENVIRONMENT SENSORS</div>
+          <div id="sensorList"></div>
+        </section>
+
+        <section class="panel glass chart-panel">
+          <div class="panel-title">AIR QUALITY TREND</div>
+          <canvas id="chartCanvas" width="420" height="210"></canvas>
+        </section>
+
+        <section class="panel glass kpi-panel">
+          <div class="panel-title">BUSINESS INTELLIGENCE KPI</div>
+          <div id="kpiList"></div>
+        </section>
+      </aside>
+    </section>
+
+    <footer class="ticker glass">
+      <div id="tickerText">Loading simulated campus intelligence feed...</div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
